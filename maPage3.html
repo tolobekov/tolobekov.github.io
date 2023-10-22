@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrakhim Tolobekov's Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 40px 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #0077b5;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #0077b5;
+        }
+
+        .contact {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0077b5;
+            border-bottom: 1px dashed #0077b5;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #005288;
+            border-color: #005288;
+        }
+
+        h2 {
+            border-bottom: 2px solid #0077b5;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: #005288;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+
+        /* Snowfall styles */
+        body:before {
+            content: "";
+            pointer-events: none;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            background: url('https://www.transparentpng.com/download/snowflakes/k0o1i9-snowflakes-transparent-background.png') repeat 0 0, url('https://www.transparentpng.com/download/snowflakes/k0o1i9-snowflakes-transparent-background.png') repeat 50px 50px;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            0% { background-position: 0 0, 50px 50px; }
+            100% { background-position: 50px 50px, 0 0; }
+        }
+
+        /* Christmas image styles */
+        .christmas-image {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 70px;
+            height: 70px;
+            background: url('https://www.transparentpng.com/download/christmas-tree/nl46y5-christmas-tree-transparent-background.png') no-repeat center center;
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="christmas-image"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Ibrakhim Tolobekov</h1>
+            <p>Computer Science Engineer | Educator</p>
+        </div>
+
+        <div class="contact">
+            <p>
+                📞 +36 20 478 6779 | 📧 <a href="mailto:ibrakhim1908@gmail.com">ibrakhim1908@gmail.com</a> | 🔗 <a
+                    href="https://linkedin.com/in/tolobekov" target="_blank">LinkedIn</a> | 📁 <a
+                    href="https://github.com/tolobekov" target="_blank">GitHub</a>
+            </p>
+        </div>
+
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Budapest University of Technology and Economics, Budapest, Hungary</strong> <br>
+                Bachelor of Science in Computer Science Engineering, Sep. 2021 – Dec. 2025 <br>
+                Relevant coursework: Object-oriented programming, Database Management Systems, Data Structures &
+                Algorithms, Graph Theory, Communication Networks, Operating systems, Artificial Intelligence
+            </li>
+        </ul>
+
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <strong>English Teacher, Logos Education Centre, Bishkek, Kyrgyzstan</strong> <br>
+                Jan. 2021 – Sep.2021 <br>
+                Delivered comprehensive English lessons to diverse groups. Collaborated with educators on curriculum
+                development. Organized periodic assessment tests.
+            </li>
+        </ul>
+
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Real-Time Collaboration Whiteboard</strong> | Java, WebSocket, July. 2023 – Aug. 2023 <br>
+                Designed an online whiteboard application. Utilized Java's Spring Boot framework and WebSocket.
+                Integrated JavaFX for UI and JUnit for testing.
+            </li>
+            <li>
+                <strong>AI-Powered Resume Matcher</strong> | C++, Python, TensorFlow, Jan. 2023 – Jan. 2023 <br>
+                Developed an AI model to match job descriptions with resumes. Implemented NLP techniques. Used C++ for
+                backend and OpenCV for scanned resumes.
+            </li>
+            <li>
+                <strong>File Encryption Suite</strong> | C, Win32 API, Aug. 2022 – Aug. 2022 <br>
+                Developed a Windows tool for file encryption. Integrated with Windows Context Menu. Ensured robust
+                compatibility across file formats.
+            </li>
+        </ul>
+
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Languages: Java, Python3, C#, C/C++, SQL</li>
+            <li>Frameworks: Robot Framework, .NET, pytest, Win32, Django, JUnit</li>
+            <li>Developer Tools: MobaXterm, Git, Docker, WSL2, Netbox, 3Ds MAX, VS Code, Visual Studio, PyCharm,
+                IntelliJ, Jira</li>
+        </ul>
+    </div>
+</body>
+
+</html>
