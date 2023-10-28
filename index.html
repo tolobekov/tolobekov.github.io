@@ -5,14 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrakhim Tolobekov's Personal Webpage</title>
-    <script>
-        const SECRET_KEY = "PERMISSION"; // Replace with your actual key
-        const userKey = prompt("Enter the secret key to view this page:");
-
-        if (userKey !== SECRET_KEY) {
-            document.body.innerHTML = "Access Denied!";
-        }
-    </script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -116,59 +108,59 @@
             background: url('https://www.transparentpng.com/download/christmas-tree/nl46y5-christmas-tree-transparent-background.png') no-repeat center center;
             background-size: contain;
         }
-    
-.snowfall {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50%; /* Taking half of the screen on the right */
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-}
 
-.snowflake {
-    position: absolute;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    background: #FFF;
-    border-radius: 50%;
-    opacity: 0.7;
-    animation: fall linear infinite;
-}
+        .snowfall {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
 
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
-}
+        .snowflake {
+            position: absolute;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: #FFF;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
 
-.santa {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border-radius: 50%;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
 
-.santa::before {
-    content: '🎅';
-    font-size: 35px;
-}
-</style>
+        .santa {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .santa::before {
+            content: '🎅';
+            font-size: 35px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="christmas-image"></div>
-    <div class="container">
+    <div class="container" id="pageContent">
         <div class="header">
             <h1>Ibrakhim Tolobekov</h1>
             <p>Computer Science Engineer | Educator</p>
@@ -230,22 +222,33 @@
         </ul>
     </div>
 
-<script>
-    const snowfall = document.createElement('div');
-    snowfall.className = 'snowfall';
-    for (let i = 0; i < 100; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.className = 'snowflake';
-        snowflake.style.left = `${Math.random() * 100}%`;
-        snowflake.style.animationDuration = `${Math.random() * 5 + 2}s`;
-        snowflake.style.animationDelay = `${Math.random() * 5}s`;
-        snowfall.appendChild(snowflake);
-    }
-    document.body.appendChild(snowfall);
-    const santa = document.createElement('div');
-    santa.className = 'santa';
-    document.body.appendChild(santa);
-</script>
+    <script>
+        const SECRET_KEY = "PERMISSION";
+        const userKey = prompt("Enter the secret key to view this page:");
+
+        if (userKey !== SECRET_KEY) {
+            const pageContent = document.getElementById('pageContent');
+            pageContent.innerHTML = "<h2 style='text-align:center;'>Access Denied!</h2>";
+        }
+    </script>
+
+    <script>
+        const snowfall = document.createElement('div');
+        snowfall.className = 'snowfall';
+        for (let i = 0; i < 100; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.style.left = `${Math.random() * 100}%`;
+            snowflake.style.animationDuration = `${Math.random() * 5 + 2}s`;
+            snowflake.style.animationDelay = `${Math.random() * 5}s`;
+            snowfall.appendChild(snowflake);
+        }
+        document.body.appendChild(snowfall);
+        const santa = document.createElement('div');
+        santa.className = 'santa';
+        document.body.appendChild(santa);
+    </script>
+
     <footer>
         <p>Copyright © 2023</p>
     </footer>
