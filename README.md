@@ -1,2 +1,1 @@
-# tolobekov.github.io
-tolobekov.tech
+# tolobekov.g
