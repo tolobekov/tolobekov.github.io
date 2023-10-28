@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrakhim Tolobekov's Personal Webpage</title>
+    <script>
+        const SECRET_KEY = "PERMISSION"; // Replace with your actual key
+        const userKey = prompt("Enter the secret key to view this page:");
+
+        if (userKey !== SECRET_KEY) {
+            document.body.innerHTML = "Access Denied!";
+        }
+    </script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -238,6 +246,9 @@
     santa.className = 'santa';
     document.body.appendChild(santa);
 </script>
+    <footer>
+        <p>Copyright © 2023</p>
+    </footer>
 </body>
 
 </html>
