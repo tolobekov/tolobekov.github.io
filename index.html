@@ -108,7 +108,54 @@
             background: url('https://www.transparentpng.com/download/christmas-tree/nl46y5-christmas-tree-transparent-background.png') no-repeat center center;
             background-size: contain;
         }
-    </style>
+    
+.snowfall {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%; /* Taking half of the screen on the right */
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.santa {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.santa::before {
+    content: '🎅';
+    font-size: 35px;
+}
+</style>
 </head>
 
 <body>
@@ -174,6 +221,23 @@
                 IntelliJ, Jira</li>
         </ul>
     </div>
+
+<script>
+    const snowfall = document.createElement('div');
+    snowfall.className = 'snowfall';
+    for (let i = 0; i < 100; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.style.left = `${Math.random() * 100}%`;
+        snowflake.style.animationDuration = `${Math.random() * 5 + 2}s`;
+        snowflake.style.animationDelay = `${Math.random() * 5}s`;
+        snowfall.appendChild(snowflake);
+    }
+    document.body.appendChild(snowfall);
+    const santa = document.createElement('div');
+    santa.className = 'santa';
+    document.body.appendChild(santa);
+</script>
 </body>
 
 </html>
